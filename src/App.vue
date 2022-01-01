@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/list">List</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
@@ -59,7 +59,8 @@ button {
 .fade-enter {
   opacity: 0;
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease-out;
 }
 .fade-leave-to {
@@ -71,11 +72,22 @@ button {
   opacity: 0;
 }
 .slide-fade-enter-active,
-.fade-leave-active {
+.slide-fade-leave-active {
   transition: all 0.2s ease;
 }
 .slide-fade-leave-to {
   transform: translateX(-10px);
   opacity: 0;
+}
+
+.slide-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.slide-up-enter-active {
+  transition: all 0.2s ease;
+}
+.slide-up-move {
+  transition: transform 0.5s ease-out;
 }
 </style>
